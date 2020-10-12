@@ -9,6 +9,16 @@
   <p th:if="${username}">
     [[${username}]]
   </p>
+  <p>
+    <a href="/rock">グー</a>
+    <a href="/scissors">チョキ</a>
+    <a href="/paper">パー</a>
+  </p>
+  <div th:if="${result}">
+    あなたの手 [[${yourhand}]]</br>
+    あいての手 グー</br>
+    結果 [[${result}]]</br>
+  </div>
 </body>
 
 </html>
