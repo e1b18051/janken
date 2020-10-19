@@ -17,6 +17,12 @@ public class Lec02Controller {
     model.addAttribute("username", "Hi "+ username);
     return "lec02.html";
   }
+
+  @GetMapping("/lec02")
+  public String lec02() {
+    return "lec02.html";
+  }
+
   @GetMapping("/rock")
     public String rock(ModelMap model){
       String hand ="グー";
