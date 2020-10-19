@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.springframework.org/schema/security">
 
 <head>
   <meta charset="utf-8">
 </head>
 
 <body>
-  <p th:if="${username}">
-    [[${username}]]
-  </p>
+  <div><a href="/logout">ログアウト</a></div>
+  <p>エントリー</p>
+  <div th:if="${room}">
+    <ul>
+      <li th:each="user : ${room.users}">[[${user}]]</li>
+    </ul>
+  </div>
+  <p th:each="user : ${room.users}">Hi [[${user}]]</p>
   <p>
     <a href="/rock">グー</a>
     <a href="/scissors">チョキ</a>
