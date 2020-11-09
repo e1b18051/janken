@@ -10,6 +10,17 @@
   <div th:if="${user_name} and ${cpu_name}">
     <h2>[[${user_name}]] V.S. [[${cpu_name}]]</h2>
   </div>
+  <p>
+    <a href="/match/rock">グー</a>
+    <a href="/match/scissors">チョキ</a>
+    <a href="/match/paper">パー</a>
+  </p>
+  <div th:if="${result}">
+    あなたの手 [[${yourhand}]]</br>
+    あいての手 グー</br>
+    結果 [[${result}]]</br>
+  </div>
+  <a href="/lec02">もどる</a>
 </body>
 
 </html>

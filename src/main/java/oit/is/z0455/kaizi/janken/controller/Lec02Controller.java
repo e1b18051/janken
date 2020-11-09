@@ -58,32 +58,50 @@ public class Lec02Controller {
     return "match.html";
   }
 
-  @GetMapping("/rock")
+  @GetMapping("/match/rock")
     public String rock(ModelMap model){
       String hand ="グー";
       Janken janken = new Janken(hand);
+      Match match = new Match();
+
+      match.setUser_1(2);
+      match.setUser_2(1);
+      match.setUser_1_hand("グー");
+      match.setUser_2_hand("グー");
 
       model.addAttribute("yourhand", hand);
       model.addAttribute("result", janken.result);
-      return "lec02.html";
+      return "match.html";
     }
-  @GetMapping("/scissors")
+  @GetMapping("/match/scissors")
     public String scissors(ModelMap model){
       String hand ="チョキ";
       Janken janken = new Janken(hand);
+      Match match = new Match();
+
+      match.setUser_1(2);
+      match.setUser_2(1);
+      match.setUser_1_hand("チョキ");
+      match.setUser_2_hand("グー");
 
       model.addAttribute("yourhand", hand);
       model.addAttribute("result", janken.result);
-      return "lec02.html";
+      return "match.html";
     }
-  @GetMapping("/paper")
+  @GetMapping("/match/paper")
     public String paper(ModelMap model){
       String hand ="パー";
       Janken janken = new Janken(hand);
+      Match match = new Match();
+
+      match.setUser_1(2);
+      match.setUser_2(1);
+      match.setUser_1_hand("パー");
+      match.setUser_2_hand("グー");
 
       model.addAttribute("yourhand", hand);
       model.addAttribute("result", janken.result);
-      return "lec02.html";
+      return "match.html";
     }
 
 }
