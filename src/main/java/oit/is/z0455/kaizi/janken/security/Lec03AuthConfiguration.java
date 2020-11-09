@@ -29,6 +29,9 @@ public class Lec03AuthConfiguration extends WebSecurityConfigurerAdapter {
 
     http.authorizeRequests().antMatchers("/lec02/**").authenticated();
 
+    http.csrf().disable();
+    http.headers().frameOptions().disable();
+
     http.logout().logoutSuccessUrl("/");
   }
 }
