@@ -7,13 +7,15 @@
 
 <body>
   <div><a href="/logout">ログアウト</a></div>
-  <p>エントリー</p>
-  <div th:if="${room}">
+  <p>
+    <div th:if="${login_user}">
+      Hi [[${login_user}]]
+    </div>
+  <h2>エントリー</h2>
     <ul>
-      <li th:each="user : ${room.users}">[[${user}]]</li>
+      <li th:each="user,stat:${users}">[[${user.name}]]</li>
     </ul>
   </div>
-  <p th:each="user : ${room.users}">Hi [[${user}]]</p>
   <p>
     <a href="/rock">グー</a>
     <a href="/scissors">チョキ</a>
