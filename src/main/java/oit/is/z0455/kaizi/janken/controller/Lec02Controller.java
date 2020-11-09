@@ -51,6 +51,13 @@ public class Lec02Controller {
     return "lec02.html";
   }
 
+  @GetMapping("/match")
+  public String match(@RequestParam Integer id, Principal prin, ModelMap model) {
+    model.addAttribute("user_name", prin.getName());
+    model.addAttribute("cpu_name", userMapper.selectAllUsers().get(id - 1).getName());
+    return "match.html";
+  }
+
   @GetMapping("/rock")
     public String rock(ModelMap model){
       String hand ="グー";
