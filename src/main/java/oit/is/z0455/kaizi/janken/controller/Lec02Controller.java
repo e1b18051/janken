@@ -66,8 +66,8 @@ public class Lec02Controller {
 
       match.setUser_1(2);
       match.setUser_2(1);
-      match.setUser_1_hand("グー");
-      match.setUser_2_hand("グー");
+      match.setUser_1_hand("Gu");
+      match.setUser_2_hand("Gu");
 
       model.addAttribute("yourhand", hand);
       model.addAttribute("result", janken.result);
@@ -81,8 +81,8 @@ public class Lec02Controller {
 
       match.setUser_1(2);
       match.setUser_2(1);
-      match.setUser_1_hand("チョキ");
-      match.setUser_2_hand("グー");
+      match.setUser_1_hand("Choki");
+      match.setUser_2_hand("Gu");
 
       model.addAttribute("yourhand", hand);
       model.addAttribute("result", janken.result);
@@ -96,8 +96,8 @@ public class Lec02Controller {
 
       match.setUser_1(2);
       match.setUser_2(1);
-      match.setUser_1_hand("パー");
-      match.setUser_2_hand("グー");
+      match.setUser_1_hand("Pa");
+      match.setUser_2_hand("Gu");
 
       model.addAttribute("yourhand", hand);
       model.addAttribute("result", janken.result);
